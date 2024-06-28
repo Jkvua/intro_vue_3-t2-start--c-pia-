@@ -23,7 +23,7 @@ const app = Vue.createApp({
             if (this.cart > 0) {
                 this.cart -= 1;
         } else {
-            console.log("Não tem nada no carrinho!")
+            Swal.fire("não tem nada no carrinho!");
             }
         },
         
