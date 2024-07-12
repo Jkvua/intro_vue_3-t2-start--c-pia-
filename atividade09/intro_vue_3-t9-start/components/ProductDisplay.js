@@ -19,11 +19,8 @@ app.component('product-display', {
             <p v-else>Out of Stock</p>
             
             <p>Shipping: {{ shipping }}</p>
-            <ul>
-              <li v-for="detail in details">
-                  {{ detail }}
-              </li>
-            </ul>
+            <product-details :details="details" ></product-details>
+            
             <div 
               v-for="(variant, index) in variants" 
               :key="variant.id" 
@@ -81,19 +78,3 @@ app.component('product-display', {
         }
     }
 });
-/*app.component('product-details', {
-  props: {
-    detail: {
-      type: Array,
-      required: true
-    },
-  },
-    template:
-      <div class="product-details">
-        <ul>
-          <li v-for="detail in details" key='detail'>
-              {{ detail }}
-          </li>
-        </ul>
-      </div>,
-})*/
