@@ -4,7 +4,7 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
 import App from './App.vue'
-import router from './router'
+import router from './router' /* estamos importando o index.js do diretorio router */
 
 const app = createApp(App)
 
